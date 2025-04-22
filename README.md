@@ -13,7 +13,7 @@
 
 ## 2. Core Components of Minishell
   ## 2.1 Input Handling
-### Task 2: Implement a basic loop to read user input.
+### 💻​Task 2: Implement a basic loop to read user input.
 
 #### - Create a function that continuously waits for user input.
 
@@ -24,7 +24,7 @@
 #### - Assigned to: Team member focused on input/output handling.
 
 ## 2.2 Tokenization (Parsing)
-### Task 3: Parse the input into tokens.
+### 💻​Task 3: Parse the input into tokens.
 
 #### - Tokenize the input based on spaces, handling quoted strings (e.g., "Hello World").
 
@@ -33,7 +33,7 @@
 #### - Assigned to: Member focused on parsing and string handling.
 
 ## 2.3 Executing Commands
-### Task 4: Implement command execution.
+### 💻​Task 4: Implement command execution.
 
 #### - Use fork() to create child processes for each command.
 
@@ -43,7 +43,7 @@
 
 ## 3. Built-In Commands Implementation
 ## 3.1 Built-in cd Command
-### Task 5: Implement cd to change the current working directory.
+### 💻​Task 5: Implement cd to change the current working directory.
 
 #### - Handle relative and absolute paths.
 
@@ -54,21 +54,21 @@
 #### - Assigned to: Member focused on implementing shell features and environment handling.
 
 ## 3.2 Built-in echo Command
-### Task 6: Implement echo to print text to the terminal.
+### 💻​Task 6: Implement echo to print text to the terminal.
 
 #### - Handle flags like -n to suppress the newline.
 
 #### - Assigned to: Same member as cd or someone working on output handling.
 
 ## 3.3 Built-in env Command
-### Task 7: Implement env to print environment variables.
+### 💻​Task 7: Implement env to print environment variables.
 
 #### - Print the environment variables in the current shell.
 
 #### - Assigned to: Same member as cd or another member working on environment variables.
 
 ## 3.4 Built-in exit Command
-### Task 8: Implement exit to terminate the shell.
+### 💻​Task 8: Implement exit to terminate the shell.
 
 #### - Handle an optional exit status (e.g., exit 1 for error).
 
@@ -78,7 +78,7 @@
 
 ## 4. Advanced Shell Features
 ## 4.1 Piping
-### Task 9: Implement piping between commands.
+### 💻​Task 9: Implement piping between commands.
 
 #### - Use pipe() and dup2() for redirecting output from one command to another.
 
@@ -87,7 +87,7 @@
 #### - Assigned to: Member experienced with system calls and inter-process communication.
 
 ## 4.2 Redirection (>, <, >>)
-### Task 10: Implement input and output redirection.
+### 💻​Task 10: Implement input and output redirection.
 
 #### - Handle redirection to files (> and >> for output, < for input).
 
@@ -96,7 +96,7 @@
 #### - Assigned to: Member familiar with file handling and redirection.
 
 ## 4.3 Environment Variables
-### Task 11: Implement environment variable handling.
+### 💻​Task 11: Implement environment variable handling.
 
 #### - Set and get environment variables with setenv() and getenv().
 
@@ -105,7 +105,7 @@
 #### - Assigned to: Member focused on environment handling and system calls.
 
 ## 4.4 Signal Handling
-### Task 12: Implement signal handling for interrupts (Ctrl+C) and background processes.
+### 💻​Task 12: Implement signal handling for interrupts (Ctrl+C) and background processes.
 
 #### - Use signal() or sigaction() to handle signals.
 
@@ -115,7 +115,7 @@
 
 ## 5. Testing & Debugging
 ## 5.1 Unit Tests for Commands
-### Task 13: Write test cases for each built-in command (cd, echo, env, exit).
+### 💻​Task 13: Write test cases for each built-in command (cd, echo, env, exit).
 
 #### - Use simple test cases (e.g., cd /home, echo "Hello World").
 
@@ -124,14 +124,14 @@
 #### - Assigned to: QA or testing-focused team member.
 
 ## 5.2 Test Shell with Different Inputs
-### Task 14: Test the shell with various scenarios (pipes, redirections, commands, edge cases).
+### 💻​Task 14: Test the shell with various scenarios (pipes, redirections, commands, edge cases).
 
 #### - Check for correct output, error handling, and robustness.
 
 #### - Assigned to: All team members (for thorough testing).
 
 ## 5.3 Bug Fixing and Polishing
-### Task 15: Review and fix bugs.
+### 💻​Task 15: Review and fix bugs.
 
 #### - Test edge cases (e.g., invalid command arguments, empty inputs).
 
@@ -141,14 +141,14 @@
 
 ## 6. Documentation & Finalization
 ## 6.1 Write Documentation
-### Task 16: Document the project, explaining the design choices and how to use the shell.
+### 💻​Task 16: Document the project, explaining the design choices and how to use the shell.
 
 #### - Provide a README.md with setup instructions, usage examples, and a description of the shell's features.
 
 #### - Assigned to: Member responsible for documentation.
 
 ## 6.2 Code Review and Merge
-### Task 17: Conduct a final code review.
+### 💻​Task 17: Conduct a final code review.
 
 #### - Ensure all code is consistent, well-documented, and adheres to coding standards.
 
@@ -157,7 +157,7 @@
 #### - Assigned to: All team members for code review.
 
 ## 7. Final Testing & Submission
-### Task 18: Final round of testing and submission.
+### 💻​Task 18: Final round of testing and submission.
 
 #### - Ensure everything works as expected before submission.
 
