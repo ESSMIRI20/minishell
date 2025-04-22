@@ -1,6 +1,6 @@
 # minishell
 
-1. Initial Setup & Project Structure
+## 1. Initial Setup & Project Structure
 # Task 1: Set up a GitHub repository and organize the project structure.
 
 Create a src/ folder for source code.
