@@ -3,15 +3,15 @@
 ## 1. Initial Setup & Project Structure
 ### Task 1: Set up a GitHub repository and organize the project structure.
 
-#### Create a src/ folder for source code.
+#### - Create a src/ folder for source code.
 
-#### Create an include/ folder for header files.
+#### - Create an include/ folder for header files.
 
-#### Set up Makefile for compiling the project.
+#### - Set up Makefile for compiling the project.
 
-#### Add .gitignore to exclude unnecessary files.
+#### - Add .gitignore to exclude unnecessary files.
 
-#### Assigned to: Team Lead (if applicable) or a couple of members to set up the project framework.
+#### - Assigned to: Team Lead (if applicable) or a couple of members to set up the project framework.
 
 ## 2. Core Components of Minishell
   ## 2.1 Input Handling
