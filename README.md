@@ -37,7 +37,7 @@
 
 #### - Use fork() to create child processes for each command.
 
-#### - Use execvp() or execve() to execute the parsed command in the child process.
+#### - Use execve() to execute the parsed command in the child process.
 
 #### - Assigned to: Member with experience in process management and system calls.
 
