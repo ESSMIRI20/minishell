@@ -1,7 +1,7 @@
 #include "../include/minishell.h"
 #include "../Libft/libft.h"
 
-const char *check_exec(char *s)
+char *check_exec(char *s)
 {
 	int    i;
 
@@ -9,7 +9,7 @@ const char *check_exec(char *s)
 	char **str = ft_split(getenv("PATH"), ':');
 	while(str[i])
 	{
-		const char *path = ft_strjoin(str[i], "/");
+		char *path = ft_strjoin(str[i], "/");
 		path = ft_strjoin(path, s);
 		if(access(path, X_OK) == 0)
 			return (path);
@@ -20,16 +20,34 @@ const char *check_exec(char *s)
 
 void command_exec()
 {
+		char buffer[1024];
+		char *buff = "";
+		buff = ft_strjoin(buff, CYELL "enigma@minishell:" GREEN);
+		buff = ft_strjoin(buff, getenv("PWD"));
+		buff = ft_strjoin(buff, RESET "$ ");
+		char *s = readline(buff);
 	while(1)
 	{
-		char *s = readline("$>");
 		char **str = ft_split(s, ' ');
-		const char *path = check_exec(str[0]);
+		char *path = check_exec(str[0]);
 		pid_t pid = fork();
+
 		if(pid == 0)
-			execve(path, &str[0], NULL);
+		{
+			if(ft_strncmp(path, "cd", 2) == 0)
+			{
+				chdir("src");
+    			if (getcwd(buffer, sizeof(buffer)) != NULL)
+       				printf("Current working directory: %s\n", buffer);
+				else
+        			perror("getcwd failed");
+			}
+			else
+				execve(path, &str[0], NULL);
+		}
 		else if(pid > 0)
 			wait(NULL);
+		s = readline(buff);
 	}
 }
 
