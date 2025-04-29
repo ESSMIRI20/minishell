@@ -3,23 +3,30 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = minishell
 
+PATH1 = Libft/libft.a
+
 FILES = src/
 
 OB = $(FILES:.c=.o)
 
-all : $(NAME)
+all : $(PATH1) $(NAME)
+
+$(PATH1):
+		$(MAKE) -C Libft
 
 $(NAME) : $(OB)
-		$(CC) $(CFLAGS) -o $(NAME) $(OB)
+		$(CC) $(CFLAGS) -o $(NAME) $(OB) $(PATH1)
 
 %.o : %.c
 		$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 		rm -f $(OB)
+		$(MAKE) clean -C Libft
 
 fclean : clean
 		rm -f $(NAME)
+		$(MAKE) clean -C Libft
 
 re : fclean all
 
