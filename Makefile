@@ -5,7 +5,7 @@ NAME = minishell
 
 PATH1 = Libft/libft.a
 
-FILES = src/
+FILES = src/minishell.c
 
 OB = $(FILES:.c=.o)
 
@@ -15,7 +15,7 @@ $(PATH1):
 		$(MAKE) -C Libft
 
 $(NAME) : $(OB)
-		$(CC) $(CFLAGS) -o $(NAME) $(OB) $(PATH1)
+		$(CC) $(CFLAGS) -o $(NAME) $(OB) $(PATH1) -lreadline
 
 %.o : %.c
 		$(CC) $(CFLAGS) -c $< -o $@
