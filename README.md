@@ -27,3 +27,13 @@ Clone the repository:
 ```bash
 git clone https://github.com/<your-username>/minishell.git
 cd minishell
+```
+
+Compile:
+```
+make
+```
+Run the shell:
+```
+./minishell
+```
