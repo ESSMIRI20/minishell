@@ -2,7 +2,6 @@
 
 ![Language: C](https://img.shields.io/badge/Language-C-red)
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue)
-![Build: Passing](https://img.shields.io/badge/Build-Passing-brightgreen)
 
 A small Unix-like shell implemented in C as part of the 1337 / 42 school curriculum.  
 Minishell supports command execution, pipelines, redirections, heredoc, and built-in commands. It uses an **Abstract Syntax Tree (AST)** for parsing commands, making it closer to real-world shell behavior.
