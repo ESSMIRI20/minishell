@@ -33,21 +33,18 @@ Clone the repository:
 ```bash
 git clone https://github.com/<your-username>/minishell.git
 cd minishell
+```
 Compile:
-
-bash
-Copy code
+```
 make
+```
 Run the shell:
-
-bash
-Copy code
+```
 ./minishell
-Usage
+```
+**Usage
 Example commands:
-
-bash
-Copy code
+```
 $ echo "Hello, World!"
 Hello, World!
 $ ls -la
@@ -58,43 +55,38 @@ $ cat << EOF | grep "main" > result.txt
 > int main() {
 > return 0;
 > EOF
+```
 Exit the shell:
-
-bash
-Copy code
+```
 $ exit
+```
 AST (Abstract Syntax Tree)
 Minishell uses an AST to parse commands before execution. This allows handling complex commands with pipes, redirections, and heredocs in a structured way.
 
 Example command with pipes and redirection:
-
-bash
-Copy code
+```
 $ ls -l | grep ".c" > output.txt
+```
 AST representation:
 
-less
-Copy code
          [REDIRECTION > output.txt]
                     |
                 [PIPE |]
                /       \
         [COMMAND ls -l] [COMMAND grep ".c"]
 Example command with heredoc:
-
-bash
-Copy code
+```
 $ cat << EOF | grep "main" > result.txt
 > line1
 > int main() {
 > return 0;
 > EOF
+```
 AST representation:
-
-less
-Copy code
+```
          [REDIRECTION > result.txt]
                     |
                 [PIPE |]
                /       \
 [HEREDOC << EOF: cat] [COMMAND grep "main"]
+```
