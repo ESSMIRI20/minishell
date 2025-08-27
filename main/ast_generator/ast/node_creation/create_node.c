@@ -1,0 +1,60 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   create_node.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: itamsama <itamsama@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/26 04:58:40 by itamsama          #+#    #+#             */
+/*   Updated: 2025/08/26 04:59:04 by itamsama         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ast.h"
+
+t_ast_node	*make_ctrl(t_list **tokens)
+{
+	t_token		*tok;
+	t_ast_node	*node;
+	t_ctrl_op	op;
+
+	if (!tokens || !*tokens)
+		return (NULL);
+	tok = (*tokens)->content;
+	op = map_ctrl_type(tok->type);
+	if (op == CTRL_INVALID)
+		return (NULL);
+	node = ft_calloc(1, sizeof(*node));
+	node->type = AST_CONTROL;
+	node->data.ctrl.op = op;
+	node->data.ctrl.left = NULL;
+	node->data.ctrl.right = NULL;
+	*tokens = (*tokens)->next;
+	return (node);
+}
+
+t_ast_node	*make_redir(t_list **tokens)
+{
+	t_ast_node		*node;
+	t_token			*tok;
+	t_token			*file_tok;
+	t_redir_type	redir;
+
+	if (!tokens || !*tokens || !(*tokens)->next)
+		return (NULL);
+	tok = (*tokens)->content;
+	redir = map_redir_type(tok->type);
+	if (redir == REDIR_INVALID)
+		return (NULL);
+	*tokens = (*tokens)->next;
+	if (!*tokens)
+		return (NULL);
+	file_tok = (*tokens)->content;
+	node = ft_calloc(1, sizeof(*node));
+	node->type = AST_REDIR;
+	node->data.redir.redir_type = redir;
+	node->data.redir.file = ft_strdup(file_tok->text);
+	node->data.redir.child = NULL;
+	*tokens = (*tokens)->next;
+	return (node);
+}
