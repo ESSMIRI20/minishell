@@ -37,3 +37,58 @@ Run the shell:
 ```
 ./minishell
 ```
+
+Usage
+
+Example commands:
+```
+$ echo "Hello, World!"
+Hello, World!
+$ ls -la
+$ cd ..
+$ pwd
+$ cat << EOF | grep "main" > result.txt
+> line1
+> int main() {
+> return 0;
+> EOF
+```
+
+Exit the shell:
+```
+$ exit
+```
+AST (Abstract Syntax Tree)
+
+Minishell uses an AST to parse commands before execution. This allows handling complex commands with pipes, redirections, and heredocs in a structured way.
+
+Example command with pipes and redirection:
+```
+$ ls -l | grep ".c" > output.txt
+```
+
+AST representation:
+
+         [REDIRECTION > output.txt]
+                    |
+                [PIPE |]
+               /       \
+        [COMMAND ls -l] [COMMAND grep ".c"]
+
+
+Example command with heredoc:
+```
+$ cat << EOF | grep "main" > result.txt
+> line1
+> int main() {
+> return 0;
+> EOF
+```
+
+AST representation:
+
+         [REDIRECTION > result.txt]
+                    |
+                [PIPE |]
+               /       \
+[HEREDOC << EOF: cat] [COMMAND grep "main"]
