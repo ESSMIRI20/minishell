@@ -86,9 +86,10 @@ $ cat << EOF | grep "main" > result.txt
 ```
 
 AST representation:
-
+```
          [REDIRECTION > result.txt]
                     |
                 [PIPE |]
                /       \
 [HEREDOC << EOF: cat] [COMMAND grep "main"]
+```
