@@ -36,7 +36,7 @@ git clone https://github.com/ESSMIRI20/minishell.git
 ```
 or
 ```
-git@github.com:ESSMIRI20/minishell.git
+git clone git@github.com:ESSMIRI20/minishell.git
 ```
 ---
 ```
