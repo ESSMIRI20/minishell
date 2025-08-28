@@ -38,9 +38,11 @@ or
 ```
 git@github.com:ESSMIRI20/minishell.git
 ```
+---
 ```
 cd minishell
 ```
+---
 Compile:
 ```
 make
