@@ -3,8 +3,9 @@
 ![Language: C](https://img.shields.io/badge/Language-C-red)
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue)
 
-A tiny C-shell, which reads the command line and executes the command(as an introduction to my 1337 / 42 school project)
-Suppose that Minishell executes commands like a3, pipelines, redirections, heredoc, and builtin functions. It parses the commands using a **Abstract Syntax Tree (AST)** and should therefore be closer to actual shell behavior.
+A part of the 1337 / 42 education program, a Unix-like shell developed in C.  
+
+Minishell enables the execution of commands, supports pipelines, redirections, heredoc, and includes built-in commands. It utilizes an **Abstract Syntax Tree (AST)** for command parsing, which improves its fidelity to genuine shell functionality.
 
 ---
 
