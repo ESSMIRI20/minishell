@@ -30,7 +30,7 @@ Fighter (your script) <--[execute]-- [external command] : /bin/ls /bin/echo ë“±ë
 
 Clone the repository:
 
-```bash
+```
 git clone https://github.com/ESSMIRI20/minishell.git
 cd minishell
 ```
