@@ -28,10 +28,17 @@ Fighter (your script) <--[execute]-- [external command] : /bin/ls /bin/echo ë“±ë
 
 ## Installation
 
-Clone the repository:
+###Clone the repository:
 
+use
 ```
 git clone https://github.com/ESSMIRI20/minishell.git
+```
+or
+```
+git@github.com:ESSMIRI20/minishell.git
+```
+```
 cd minishell
 ```
 Compile:
