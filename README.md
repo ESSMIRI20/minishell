@@ -10,8 +10,6 @@ Minishell enables the execution of commands, supports pipelines, redirections, h
 ---
 
 ## Features
-
-Fighter (your script) <--[execute]-- [external command] : /bin/ls /bin/echo 등등
 - Built-in commands:
 - `cd`, `echo`, `pwd`, `export`, `unset`, `env`, `exit`
 - Input/output redirections: `>`, `>>`, <`.
@@ -50,7 +48,7 @@ Run the shell:
 ```
 ./minishell
 ```
-**Usage
+## Usage
 Example commands:
 ```
 $ echo "Hello, World!"
